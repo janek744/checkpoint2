@@ -8,11 +8,27 @@ use App\Models\Prispevok;
 
 class PrispevkyController extends AControllerBase
 {
+    /**
+     * Authorize controller actions
+     * @param $action
+     * @return bool
+     */
+    public function authorize($action)
+    {
+        switch ($action){
+            case "delete":
+            case "store":
+            case "create":
+            case "edit":
+                return $this->app->getAuth()->isLogged();
+        }
+        return true;
+    }
 
     public function index(): Response
     {
         $prispevky = Prispevok::getAll();
-        return $this->html([$prispevky]);
+        return $this->html($prispevky);
     }
 
     public function delete() {
