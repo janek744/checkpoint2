@@ -2,12 +2,12 @@
 $layout = 'auth';
 /** @var Array $data */
 ?>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+<div class="container-fluid cont">
+    <div class="row prihlasenie">
+        <div class="col-sm-9 col-md-7 col-lg-5">
             <div class="card card-signin my-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Prihlásenie</h5>
+                    <h1 class="card-title text-center">Prihlásenie</h1>
                     <div class="text-center text-danger mb-3">
                         <?= @$data['message'] ?>
                     </div>
@@ -22,7 +22,7 @@ $layout = 'auth';
                                    placeholder="Password" required>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-primary" type="submit" name="submit">Prihlásiť
+                            <button class="btn" type="submit" name="submit">Prihlásiť
                             </button>
                         </div>
                     </form>

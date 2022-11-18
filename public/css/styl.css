@@ -17,8 +17,22 @@ body {
     margin-left: 5px;
 }
 
+.prihlasenie {
+    margin-left: 13%;
+}
+
+.card-title {
+    color: #292929;
+}
+
 .nav-prihl:hover {
     color: #00bfff;
+}
+
+.btn {
+    background-color: #00bfff;
+    color: #292929;
+    font-weight: bold;
 }
 
 .navbar-brand {
@@ -44,21 +58,37 @@ body {
     font-weight: bold;
 }
 
+h1 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+}
+
 .tlac {
-    margin-left: 25%;
+    margin-left: 45%;
+    margin-bottom: 20px;
 }
 
-input[type=button] {
-    color: #00bfff;
-    background-color: #00bfff;;
-}
-
-.nadp {
+.nadp, .tex, .obr {
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
     color: white;
+    padding-left: 20px;
 }
+
+.tex, .obr, .nadp {
+    margin-left: 60px;
+}
+
+.text {
+    padding-left: 30px;
+}
+
+label {
+    text-decoration: none;
+}
+
 .nadpis:hover {
     color: #00bfff;
     text-decoration: none;
@@ -88,8 +118,8 @@ input[type=button] {
 .prispevok {
     border-radius: 15px;
     border: 3px solid #00bfff;
-    width: 80%;
-    margin-top: 30px;
+    width: 65%;
+    padding-top: 15px;
 }
 img  {
     width: 100%;
