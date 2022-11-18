@@ -14,7 +14,7 @@ use \App\Models\Prispevok;
     ?>
     <div class="row prispevok">
     <?php if ($prispevok->getNazov()) { ?>
-        <a class="nadpis" href="?c=prispevky"><?php echo $prispevok->getNazov() ?></a>
+        <a class="nadpis" id="formNadpis" href="?c=prispevky"><?php echo $prispevok->getNazov() ?></a>
     <?php } ?>
     <div class="col-xxl-4">
         <?php if ($prispevok->getObrazok()) { ?>
@@ -22,7 +22,7 @@ use \App\Models\Prispevok;
         <?php } ?>
     </div>
     <div class="col-xxl-7">
-    <?php if ($prispevok->getText()) { ?>
+    <span id="formtext"><?php if ($prispevok->getText()) { ?></span>
         <p class="text">
             <?php echo $prispevok->getText() ?>
         </p>
@@ -35,5 +35,6 @@ use \App\Models\Prispevok;
     <?php } ?>
 <?php } ?>
     </div>
+<script src="public/js/script.js"></script>
     </body>
     </html>

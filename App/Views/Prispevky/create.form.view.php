@@ -11,32 +11,33 @@
 
                 <div class="nadp">
                     <label>Názov
-                    <input type="text" name="nazov" id="nazov" value="<?php echo $data->getNazov() ?>" style="width: 500px; margin-left: 45px">
+                    <input type="text" name="nazov" id="nazovForm" value="<?php echo $data->getNazov() ?>" style="width: 500px; margin-left: 45px">
                     </label>
                 </div>
 
                 <div class="obr">
                     <br>
                     <label>Obrázok
-                    <input type="text" name="obrazok" id="obrazok" value="<?php echo $data->getObrazok() ?>" style="width: 500px; margin-left: 20px;">
+                    <input type="text" name="obrazok" id="obrazokForm" value="<?php echo $data->getObrazok() ?>" style="width: 500px; margin-left: 20px;">
                     </label>
                     <br><br>
                 </div>
 
                 <div class="tex">
                     <label">Text
-                    <input type="text" name="text" id="text" value="<?php echo $data->getText() ?>" style="width: 500px; height: 100px; margin-left: 70px; vertical-align: top;">
+                    <input type="text" name="text" id="textForm" value="<?php echo $data->getText() ?>" style="width: 500px; height: 100px; margin-left: 70px; vertical-align: top;">
                     </label>
                 </div>
 
                 <br><br>
 
                 <div class="tlac">
-                    <input type="submit" name="tlacitko" value="Odoslat">
+                    <input type="submit" name="tlacitko" id="tlacitkoForm" value="Odoslat">
                 </div>
 
         </form>
     </div>
 </div>
+<script src="public/js/script.js"></script>
 </body>
 </html>

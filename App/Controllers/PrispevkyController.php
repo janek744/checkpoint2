@@ -44,11 +44,28 @@ class PrispevkyController extends AControllerBase
     public function store() {
         $id = $this->request()->getValue('id');
         $post = ( $id ? Prispevok::getOne($id) : new Prispevok());
-        $post->setObrazok($this->request()->getValue('obrazok'));
-        $post->setNazov($this->request()->getValue('nazov'));
-        $post->setText($this->request()->getValue('text'));
-        $post->save();
-        return $this->redirect("?c=prispevky");
+        $error = 0;
+
+        if ($this->request()->getValue('obrazok') == null) {
+            $post->setObrazok("Nezadany");
+            $error++;
+        }
+        else{$post->setObrazok($this->request()->getValue('obrazok'));}
+
+        if ($this->request()->getValue('nazov') == null) {
+            $post->setNazov("Nezadany");
+            $error++;
+        } else {$post->setNazov($this->request()->getValue('nazov'));}
+
+        if ($this->request()->getValue('text') == null) {
+            $post->setText("Nezadany");
+            $error++;
+        } else{$post->setText($this->request()->getValue('text'));}
+
+        if ($error > 0) {return $this->redirect("?c=prispevky&a=create");
+        } else {
+            $post->save();
+            return $this->redirect("?c=prispevky");}
     }
 
     public function create() {
