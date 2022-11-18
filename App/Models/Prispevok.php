@@ -6,7 +6,7 @@ use App\Core\Model;
 
 class Prispevok extends Model
 {
-    protected $id_prispevku;
+    protected $id;
     protected $obrazok;
     protected $nazov;
     protected $text;
@@ -16,15 +16,15 @@ class Prispevok extends Model
      */
     public function getIdPrispevku()
     {
-        return $this->id_prispevku;
+        return $this->id;
     }
 
     /**
-     * @param mixed $id_prispevku
+     * @param mixed $id
      */
-    public function setIdPrispevku($id_prispevku): void
+    public function setIdPrispevku($id): void
     {
-        $this->id_prispevku = $id_prispevku;
+        $this->id = $id;
     }
 
     /**

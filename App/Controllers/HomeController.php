@@ -32,6 +32,15 @@ class HomeController extends AControllerBase
     }
 
     /**
+     * Example of an action (authorization needed)
+     * @return \App\Core\Responses\Response|\App\Core\Responses\ViewResponse
+     */
+    public function create(): Response
+    {
+        return $this->html();
+    }
+
+    /**
      * Example of an action accessible without authorization
      * @return \App\Core\Responses\ViewResponse
      */

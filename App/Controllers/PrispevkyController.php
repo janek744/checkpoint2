@@ -44,6 +44,8 @@ class PrispevkyController extends AControllerBase
     public function store() {
         $id = $this->request()->getValue('id');
         $post = ( $id ? Prispevok::getOne($id) : new Prispevok());
+        $post->setObrazok($this->request()->getValue('obrazok'));
+        $post->setNazov($this->request()->getValue('nazov'));
         $post->setText($this->request()->getValue('text'));
         $post->save();
         return $this->redirect("?c=prispevky");
@@ -51,13 +53,11 @@ class PrispevkyController extends AControllerBase
 
     public function create() {
         return $this->html(new Prispevok(), viewName: 'create.form');
-
     }
 
     public function edit() {
         $id = $this->request()->getValue('id');
         $postToEdit = Prispevok::getOne($id);
         return $this->html($postToEdit, viewName: 'create.form');
-
     }
 }
