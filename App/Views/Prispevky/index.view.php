@@ -4,9 +4,6 @@ use \App\Models\Prispevok;
 /** @var \App\Core\IAuthenticator $auth */
 /** @var Prispevok[] $data */
 ?>
-
-    <head>
-    </head>
 <body>
 
 <div class="container-fluid cont">
@@ -22,9 +19,10 @@ use \App\Models\Prispevok;
         <?php } ?>
     </div>
     <div class="col-xxl-7">
-    <span id="formtext"><?php if ($prispevok->getText()) { ?></span>
+    <span id="formtext""><?php if ($prispevok->getText()) { ?></span>
         <p class="text">
-            <?php echo substr($prispevok->getText(), 0 , 150) ?>
+            <?php $string = substr($prispevok->getText(), 0 ,250);
+            echo implode("\n", str_split($string, 40)); ?>
         </p>
         </div>
         <?php if ($auth->isLogged()) { ?>
@@ -36,4 +34,3 @@ use \App\Models\Prispevok;
 <?php } ?>
     </div>
     </body>
-    </html>

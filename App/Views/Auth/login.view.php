@@ -10,13 +10,12 @@ $layout = 'auth';
                     <h1 class="card-title text-center">Prihlásenie</h1>
                     <form class="form-signin" method="post" action="<?= \App\Config\Configuration::LOGIN_URL ?>">
                         <div class="form-label-group mb-3">
-                            <input name="login" type="text" id="login" class="form-control" placeholder="Login"
-                                   required autofocus>
+                            <input name="login" type="text" id="login" class="form-control" placeholder="Login">
                         </div>
 
                         <div class="form-label-group mb-3">
                             <input name="password" type="password" id="password" class="form-control"
-                                   placeholder="Password" required>
+                                   placeholder="Password">
                         </div>
                         <div class="text-center">
                             <button class="btn" type="submit" name="submit" id="logBtn">Prihlásiť
