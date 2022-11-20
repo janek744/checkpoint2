@@ -8,7 +8,7 @@ $layout = 'auth';
             <div class="card card-signin my-5">
                 <div class="card-body">
                     <h1 class="card-title text-center">Prihlásenie</h1>
-                    <form class="form-signin" method="post" action="<?= \App\Config\Configuration::LOGIN_URL ?>">
+                    <form class="form-signin" method="post">
                         <div class="form-label-group mb-3">
                             <input name="login" type="text" id="login" class="form-control" placeholder="Login">
                         </div>
@@ -27,3 +27,4 @@ $layout = 'auth';
         </div>
     </div>
 </div>
+<script src="public/js/script.js"></script>

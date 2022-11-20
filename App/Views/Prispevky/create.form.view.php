@@ -2,7 +2,6 @@
 $layout = 'auth';
 /** @var Array $data */
 ?>
-<body>
 
 <div class="container-fluid cont">
     <div class="row prispevok">
@@ -42,4 +41,4 @@ $layout = 'auth';
         </form>
     </div>
 </div>
-</body>
+<script src="public/js/script2.js"></script>

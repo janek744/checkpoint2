@@ -19,7 +19,6 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/styl.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
-
 </head>
 <body>
 <nav class="navbar navbar-expand-md">
@@ -59,5 +58,4 @@
     </footer>
 </div>
 </body>
-<script src="public/js/script.js"></script>
 </html>
