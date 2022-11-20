@@ -1,3 +1,7 @@
+<?php
+$layout = 'auth';
+/** @var Array $data */
+?>
 <body>
 
 <div class="container-fluid cont">
