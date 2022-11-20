@@ -35,6 +35,5 @@ use \App\Models\Prispevok;
     <?php } ?>
 <?php } ?>
     </div>
-<script src="public/js/script.js"></script>
     </body>
     </html>
